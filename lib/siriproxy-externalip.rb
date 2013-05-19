@@ -3,6 +3,9 @@ require 'siri_objects'
 require 'net/http'
 
 class SiriProxy::Plugin::Externalip < SiriProxy::Plugin
+def initialize(config)
+     
+  end
   listen_for /external ip address/i do |state|
     url = URI.parse('http://ifconfig.me/ip')
     ip = Net::HTTP.get(url)
